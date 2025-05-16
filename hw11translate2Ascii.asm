@@ -48,7 +48,7 @@ the_loop:
     mov ebx, 1      ; write the STDOUT file
     mov eax, 4      ; invoke SYS_WWRITE (kernal opcode 4)
     mov ecx, outputBuf
-    mov edx, 24
+    mov edx, 24     ; 24 bytes in outputBuf
     int 80h
 exit:
     mov     ebx, 0      ; return 0 status on exit - 'No Errors'
